@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pocky'sBookShelf</title>
+    <link rel="stylesheet" href="css/style.css">
+    <meta name="theme-color" content="#303179">
+    <link rel="shortcut icon" href="/assets/iconBookList.png">
+</head>
+
+<body>
+    <header align="center">
+        <h2>Welcome to Pocky's Bookshelf</h2>
+        <h3>Let's make your reading list.</h3>
+        <p>"Buku adalah sumber ilmu terbaik bagi siapapun yang membacanya"</p>
+    </header>
+
+    <div class="wrapper">
+        <div class="container bg-white shadow">
+            <h2 class="container-header text-center">Masukkan buku baru</h2>
+            <form class="form" action="#" id="form">
+                <div class="form-group form-title">
+                    <label for="title">Masukkan judul buku</label>
+                    <input type="text" id="title" name="title" required>
+                </div>
+                <div class="form-group form-title">
+                    <label for="author">Masukkan nama pengarang</label>
+                    <input type="text" id="author" name="author" required>
+                </div>
+                <div class="form-group form-title">
+                    <label for="year">Masukkan tahun terbit buku</label>
+                    <input type="text" id="year" name="year" required>
+                </div>
+                <input type="submit" value="Submit" name="Submit" class="btn-submit">
+            </form>
+        </div>
+        <div class="container">
+            <h2 class="container-header">Buku yang belum selesai dibaca</h2>
+            <div class="list-item" id="bookslist"></div>
+
+            <h2 class="container-header">Buku yang sudah selesai dibaca</h2>
+            <div class="list-item" id="completed-books"></div>
+        </div>
+    </div>
+    <br>
+    <footer align="center">
+        <h2>-Copyright by pockypoem10-</h2>
+        <h3>Follow my <a href="https://instagram.com/jercor_15">instagram</a></h3>
+    </footer>
+    <script src="js/data.js"></script>
+    <script src="js/dom.js"></script>
+    <script src="js/script.js"></script>
+</body>
+
+</html>

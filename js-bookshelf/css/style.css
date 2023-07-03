@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,400;0,500;0,700;1,400&display=swap');
+* {
+    box-sizing: border-box;
+}
+
+html,
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #fae5df;
+}
+
+header {
+    background-color: #303179;
+    padding: 16px;
+}
+
+header h2 {
+    font-size: 2.7em;
+    color: #fae5df;
+    font-weight: 700;
+}
+
+header h3 {
+    padding-top: -15px;
+    font-size: 1.5em;
+    color: #ed7966;
+}
+
+header p {
+    color: #f5cac2;
+    font-size: 0.9em;
+    font-style: italic;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.wrapper .container {
+    width: 60%;
+    border-radius: 8px;
+    margin: 16px;
+    background: #F8F9FA;
+    padding: 16px;
+    flex-grow: 1;
+    height: fit-content;
+}
+
+.item {
+    border-radius: 16px;
+    margin-top: 16px;
+    padding: 12px 24px 12px 24px;
+    background: white;
+    display: flex;
+    align-items: center;
+}
+
+.item>.inner h2 {
+    font-size: 1.7em;
+    color: #362f2a;
+    margin-bottom: unset;
+}
+
+.item>.inner h3 {
+    font-size: 1.3em;
+    color: #ec5a44;
+}
+
+.item>.inner p {
+    margin-top: 5px;
+    font-size: 1.1em;
+    color: #141850;
+}
+
+.form {
+    display: flex;
+    padding: 16px;
+    flex-direction: column;
+    height: 300px;
+    border-radius: 16px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-group label {
+    margin-bottom: 4px;
+    font-size: 18;
+    font-weight: 500;
+}
+
+.shadow {
+    box-shadow: 0 5px 10px rgba(154, 160, 185, .05), 0 15px 40px rgba(166, 173, 201, .2);
+}
+
+input[type=text] {
+    background: #F5F1FF;
+    border: 2px solid #9475EA;
+    border-radius: 8px;
+    padding: 8px;
+    box-sizing: border-box;
+    margin-bottom: 8px;
+    font-size: 18px;
+}
+
+.btn-submit {
+    width: fit-content;
+    border: none;
+    border-radius: 16px;
+    padding: 6px 12px;
+    border: 2px solid #141850;
+    color: black;
+    font-size: 20px;
+    margin-top: 5px;
+    align-self: flex-end;
+    cursor: pointer;
+}
+
+.btn-submit:hover {
+    background: #303179;
+    color: white;
+}
+
+input[type=text] .btn-submit:focus {
+    outline: none;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.form-title {
+    margin: auto 0;
+}
+
+.container bg-white shadow {
+    padding: 10px 10px;
+}
+
+h2.container-header {
+    font-size: 1.7em;
+    color: #141850;
+    padding: 0px 40px;
+}
+
+.list-item {
+    padding: 0px 20px;
+    margin-bottom: 30px;
+}
+
+.check-button {
+    background: url('/assets/check-outline.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.check-button:hover {
+    background: url('/assets/check-solid.png');
+    background-size: contain;
+}
+
+.trash-button {
+    background: url('/assets/trash-outline.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: 16px;
+    cursor: pointer;
+    border: none;
+}
+
+.trash-button:hover {
+    background: url('/assets/trash-fill.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+}
+
+.undo-button {
+    background: url('/assets/undo-ouline.png');
+    background-size: contain;
+    width: 40px;
+    height: 40px;
+    margin-left: auto;
+    cursor: pointer;
+    border: none;
+}
+
+.undo-button:hover {
+    background: url('/assets/undo-ouline.png');
+    background-size: contain;
+}
+
+.check-button:focus,
+.trash-button {
+    outline: none;
+}
+
+footer h2 {
+    color: #0f123d;
+    font-size: 1.4em;
+}
+
+footer h3 {
+    font-style: italic;
+}
+
+foter h3 a {
+    list-style-type: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        margin: 0;
+    }
+    .wrapper .container {
+        width: 100%;
+    }
+    .list-item {
+        width: 97%;
+    }
+    .form {
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 516px) {
+    h2.container-header {
+        font-size: 1.4em;
+    }
+    .item>.inner h2 {
+        font-size: 1.5em;
+    }
+    .item>.inner h3 {
+        font-size: 1.3em;
+    }
+    .item>.inner p {
+        font-size: 1em;
+    }
+    .inner {
+        padding: 0px 3px;
+        max-width: 190px;
+    }
+    .check-button,
+    .undo-button,
+    .trash-button {
+        width: 25px;
+        height: 25px;
+        background-repeat: no-repeat;
+    }
+    @media only screen and (max-width: 405px) {
+        h2.container-header {
+            font-size: 1.3em;
+        }
+        .item>.inner h2 {
+            font-size: 1.1em;
+        }
+        .item>.inner h3 {
+            font-size: 1em;
+        }
+        .item>.inner p {
+            font-size: 0.7em;
+        }
+        .inner {
+            padding: 0px 9px;
+            max-width: 180px;
+        }
+        button {
+            padding-left: 9px;
+            margin-left: 2px;
+        }
+        #bookslist.item button {
+            margin-right: 1px;
+        }
+        .undo-button,
+        .trash-button {
+            width: 20px;
+            height: 20px;
+            background-repeat: no-repeat;
+        }
+        .check-button {
+            width: 22px;
+            height: 22px;
+        }
+    }
+    @media only screen and (max-width: 350px) {
+        .item-shadow {
+            width: 100%;
+        }
+        #bookslist .inner {
+            width: 151.95px;
+        }
+        .inner {
+            width: 94%;
+        }
+        .list-item {
+            width: 100%;
+        }
+        .undo-button {
+            margin-right: 4px;
+        }
+        .check-button {
+            width: 22px;
+            height: 22px;
+        }
+        .undo-button {
+            width: 20px;
+            height: 20px;
+            margin-left: 1px;
+        }
+    }
+}
+
+@media only screen and (max-width: 280px) {
+    .check-button {
+        margin-left: 3px;
+        width: 19px;
+        height: 19px;
+    }
+}
