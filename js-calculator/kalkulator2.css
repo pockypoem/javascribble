@@ -1,0 +1,73 @@
+body {
+    background-color: #f3ffe3;
+}
+
+.kalkulator {
+    width: 300px;
+    background: #eaeaea;
+    margin: 50px auto 0px auto;
+    padding: 7px;
+    border: 2px solid black;
+    border-radius: 5px;
+}
+
+#layar {
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid #cecece;
+    font-size: 25px;
+    font-weight: bold;
+    color: black;
+    padding: 8px 5px;
+    text-align: right;
+    outline: none;
+}
+
+.content-tombol {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.tombol {
+    display: flex;
+    width: 25%;
+    box-sizing: border-box;
+    /*Agar satu baris jadi 4 kolom*/
+    font-size: 20px;
+    color: black;
+    font-weight: grey;
+    height: 70px;
+    border: 1px solid #cecece;
+    border-top: none;
+    border-left: none;
+    justify-content: center;
+    align-items: center;
+}
+
+.tombol:nth-child(4n+1) {
+    /*Memberikan style di setiap 4 class tombol*/
+    border-left: 1px solid #cecece;
+}
+
+.tombol:hover {
+    background: #eeeeee;
+    cursor: pointer;
+}
+
+#nol {
+    flex-grow: 1;
+}
+
+.operator {
+    background: #0085FF;
+    font-weight: bold;
+}
+
+#hitung {
+    background: #ffa64a;
+    color: white;
+}
+
+#hitung:hover {
+    background: orange;
+}
