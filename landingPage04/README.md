@@ -1,7 +1,7 @@
 # Landing Page
 
 ## Demo Link
-https://pockynft-lp.netlify.app/
+https://ailandingpage-pocky.netlify.app/
 
 ## Tech Stack
 * HTML
