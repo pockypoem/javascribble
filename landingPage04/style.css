@@ -1,0 +1,562 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+@keyframes changeGradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+  
+  @keyframes blurAnimation {
+    0%, 100% {
+      filter: blur(90px);
+    }
+    50% {
+      filter: blur(0);
+    }
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    background-color: #fff;
+}
+
+.main {
+    padding: 0 88px;
+    position: relative;
+    overflow-x: hidden;
+    background-color: #221f2f;
+    margin-bottom: -10px;
+    background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%);
+    background-size: 200% 200%; /* Menentukan ukuran latar belakang dua kali dari elemen */
+    animation: changeGradient 10s ease infinite; /* Gunakan animasi pada latar belakang */
+    position: relative;
+    overflow: hidden;
+}
+
+.main::before {
+    content: "";
+    position: absolute;
+    bottom: -150px;
+    left: 0;
+    width: 100%;
+    height: 300px;
+    border-radius: 50%;
+    background-color: #fff;
+}
+  
+.main::after {
+    content: "";
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    width: 100%;
+    height: 250px;
+    border-radius: 50%;
+    background-color: #fff;
+    transform: scaleX(1.5);
+}
+
+.main .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 0;
+}
+
+.navbar .toggler {
+    font-size: 2rem;
+    color: #c5c3c3;
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    display: none;
+}
+
+.navbar .nav-btn {
+    cursor: pointer;
+    background-color: transparent;
+    border: none;
+    width: 90px;
+    height: 40px;
+    color: #ccc;
+    font-size: 12px;
+}
+
+.navbar .nav-btn.selected {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+.navbar .logo {
+    /* background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%); */
+    background: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.navbar .item {
+    font-size: 13px;
+    color: #ccc;
+    cursor: pointer;
+}
+
+.navbar .item.selected {
+    /* background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%); */
+    background: #fff;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    broder-bottom: 1px solid #7e22ce;
+}
+
+.navbar .item:not(:last-child) {
+    margin-right: 20px;
+}
+
+.navbar .nav-buttons.active{
+    transition: all 0.3s ease;
+    opacity: 1;
+}
+
+
+/* Top Container */
+
+.main .top-container {
+    display: flex;
+    align-items:center;
+    justify-content: space-between;
+    margin-top: 3rem;
+    height: 70vh;
+    margin-bottom: 200px;
+}
+
+
+.top-container .info-box {
+    max-width: 50%;
+    animation: toRight 0.8s;
+}
+
+.top-container .badge {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: rgba(255, 255, 255, 0.2); /* Background color with opacity */
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.top-container .badge-text {
+    color: #fff; /* White text color */
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.top-container .header {
+    margin: 0;
+    color: #fff;
+    font-size: 2.7em;
+    font-weight: 600;
+    line-height: 55px;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    font-size: 20px;
+    flex-wrap: wrap; /* Izinkan flex items untuk pindah ke baris berikutnya jika ruang tidak cukup */
+}
+
+.header span {
+    display: block; /* Atur agar span menjadi blok untuk mendapatkan baris baru */
+    margin-bottom: 5px; /* Beri jarak antara baris "AI Staffs" dan "Coder" */
+}
+
+.svg-petir {
+    width: 30px; /* Atur ukuran SVG sesuai kebutuhan */
+    height: auto;
+    margin-left: 10px; /* Atur jarak antara teks dan ikon petir */
+}
+  
+  
+
+.top-container .info-text {
+    margin: 20px 0 32px;
+    color: #fff;
+    font-size: 16px;
+    line-height: 20px;
+    letter-spacing: 0.5px;
+}
+
+.top-container .info-buttons {
+    display: flex;
+}
+
+.top-container .info-btn {
+    cursor: pointer;
+    padding: 8px 38px;
+    border-radius: 16px;
+    font-weight: 500;
+    font-size: 13px;
+    letter-spacing: -1px;
+    color: #fff;
+}
+
+.top-container .info-btn.nav-btn {
+    margin-left: 20px;
+    background-color: transparent;
+    border: 1px solid #fff;
+}
+
+.top-container .info-btn.selected {
+    border: none;
+    /* background: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%); */
+    background: #343C57;
+}
+
+.top-container .laptop-img {
+    width: 55%;
+    height: auto;
+    object-fit: cover;
+    animation: floatAnimation 6s ease-in-out infinite;
+    position: relative;
+    z-index: 2;
+}
+
+.wave {
+    margin-top: -0px;
+    index: 20;
+    background-image: linear-gradient(95deg, #7e22ce 3.2%, #3b82f6 99.5%);
+    background-size: 200% 200%;
+    animation: gradientAnimation 10s linear infinite; /* Animasi latar belakang gradient */
+}
+  
+@keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    100% {
+      background-position: 100% 50%;
+    }
+}
+
+/* CSS untuk membuat foto berbentuk lingkaran */
+.floating-photo {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    overflow: hidden;
+    position: absolute;
+    z-index: 4; /* Mengatur z-index agar foto tampil di atas konten lainnya */
+    animation: floatingAnimation 3s ease infinite alternate; /* Animasi melayang */
+}
+
+.floating-icon {
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+    position: absolute;
+    animation: floatingAnimationIcon 3s ease infinite alternate; /* Animasi melayang */
+}
+
+.floating-icon img {
+    width: 100%;
+    height: 100%;
+}
+
+.floating-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+@keyframes floatAnimation {
+    0%,
+    100% {
+      transform: translateY(0); /* Tidak ada pergerakan vertikal */
+    }
+    50% {
+      transform: translateY(-10%); /* Atur jarak vertikal pergerakan */
+    }
+}
+
+/* Animasi melayang */
+@keyframes floatingAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-18%); /* Sesuaikan nilai translate Y untuk ketinggian melayang */
+    }
+}
+
+/* Animasi icon */
+
+@keyframes floatingAnimationIcon {
+    0% {
+        transform: translateY(0) translateX(0); /* Mulai dari posisi awal tanpa pergerakan */
+    }
+    50% {
+        transform: translateY(-12%) translateX(10px); /* Bergerak diagonal ke kanan sejauh 30px */
+    }
+    100% {
+        transform: translateY(0) translateX(0); /* Kembali ke posisi awal tanpa pergerakan */
+    }
+}
+
+/* Menambahkan media query untuk mengatur tampilan desktop */
+@media screen and (min-width: 601px) {
+    .main {
+        position: relative; /* Menambahkan posisi relatif pada .main */
+    }
+
+    /* Menambahkan posisi untuk masing-masing icon */
+    .icon1 {
+        top: 10px;
+        left: 50px;
+    }
+
+    .icon2 {
+        top: 150px;
+        left: 100px;
+        transform: rotate(30deg);
+    }
+
+    .icon3 {
+        top: 70px;
+        left: 200px;
+    }
+
+    .icon4 {
+        top: 210px;
+        left: 400px;
+    }
+
+    .icon5 {
+        top: 120px;
+        left: 550px;
+    }
+
+    .icon6 {
+        top: 140px;
+        left: 320px;
+    }
+
+    .icon7 {
+        top: 210px;
+        left: 650px;
+    }
+
+    /* Menambahkan posisi untuk masing-masing foto */
+    .photo1 {
+        top: 450px;
+        left: 50px;
+    }
+
+    .photo2 {
+        top: 550px;
+        left: 300px;
+    }
+
+    .photo3 {
+        top: 500px;
+        left: 550px;
+    }
+
+    .photo4 {
+        top: 600px;
+        left: 700px;
+    }
+
+    .photo5 {
+        top: 400px;
+        left: 780px;
+    }
+
+    .photo6 {
+        top: 470px;
+        left: 950px;
+    }
+
+    .photo7 {
+        top: 570px;
+        left: 1150px;
+    }
+
+}
+
+/* Menambahkan media query untuk mengatur tampilan mobile */
+@media screen and (max-width: 600px) {
+    .floating-photo {
+        display: none; /* Foto akan hilang saat tampilan mobile */
+    }
+
+    .floating-icon {
+        display: none;
+    }
+
+    .top-container .laptop-img {
+        width: 100%; /* Ukuran gambar laptop untuk tampilan mobile */
+        transform: scale(1.2); /* Memperbesar gambar laptop sebesar 20% dari ukuran aslinya */
+    }
+}
+
+
+
+/* RESPONSIVE */
+
+@media screen and (max-width: 1040px) {
+    .top-container {
+        flex-direction: column;
+    }
+
+    .top-container .info-box {
+        max-width: none;
+        margin: 60px 0;
+    }
+
+    .top-container .nft-box {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 925px) {
+    .navbar .nav-links {
+        display: none;
+    }
+
+    .navbar .nav-buttons {
+        opacity: 0;
+    }
+
+    .navbar .toggler {
+        display: flex !important;
+        align-items: center;
+    }
+
+    .get-started .info-text{
+        .text-align: center;
+    }
+
+    .get-started .items-box {
+        display: grid;
+        grid-template-columns: auto auto;
+        justify-content: space-evenly;
+        padding: 50px 0;
+    }
+
+    .get-started .items-box:before {
+        height: 200px;
+        top: 90px;
+        filter: blur(120px);
+    }
+
+}
+
+@media screen and (max-width: 700px) {
+    .top-container {
+        marin-top: 4rem !important;
+    }
+
+    .top-container .info-box {
+        max-height: none;
+        max-width: none;
+        margin-bottom: 4rem;
+    }
+
+    .top-container .nft-box {
+        display: block;
+        max-width: none;
+        max-height: none;
+    }
+
+}
+
+
+@media screen and (max-width: 600px) {
+    .main {
+        padding: 0 40px;
+    }
+
+    .top-container p.header {
+        font-size: 2.25em;
+    }
+
+    .header span {
+        display: block; /* Atur agar span menjadi blok untuk mendapatkan baris baru */
+        margin-bottom: 5px; /* Beri jarak antara baris "AI Staffs" dan "Designer" */
+    }
+
+    .footer .footer-header {
+        font-size: 20px;
+        line-height: 30px;
+        max-width: 100%;
+        margin-bottom: 30px;
+        text-align: center;
+    }
+
+    .footer .footer-links {
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .footer .footer-links .link {
+        margin-left: 20px;
+    }
+
+    .footer .footer-links .link h5 {
+        font-size: 15px;
+        line-height: 35px;
+    }
+
+    .footer .footer-links .link p {
+        font-size: 11px;
+        line-height: 18px;
+    }
+
+}
+
+
+@keyframes toRight{
+    from{
+        transform: translateX(-700px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
+
+@keyframes toLeft{
+    from{
+        transform: translateX(550px);
+    }
+    to{
+        transform: translateX(0px);
+    }
+}
